@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        color: aliceblue;
+        background-color: coral;
+        padding: 10px 20px;
+        margin: 20px;
+    }
+
+    body{
+        font-size: 30px;
+    }
+
+    input{
+        font-size:20px ;
+    }
+</style>
+<body>
+    Enter 1st Number: <input placeholder="enter number" id="num1" type="text"><br/>
+    Enter 2nd Number: <input placeholder="enter number" id="num2" type="text"><br/>
+
+    <button onclick="mul()" value="Multiply">*</button>
+    <button onclick="div()" value="Division">/</button>
+    <button onclick="add()" value="Addition">+</button>
+    <button onclick="sub()" value="Subtraction">-</button>
+    <button onclick="percentage()" value="Percentage">%</button>
+   
+    <p>
+        Answer is: <br>
+        <span id="result"></span>
+    </p>
+</body>
+<script>
+    function mul(){
+        num1 = parseFloat(document.getElementById("num1").value);
+        num2 = parseFloat(document.getElementById("num2").value);
+document.getElementById("result").innerHTML = num1 * num2;
+    }
+
+    function div(){
+        num1 = parseFloat(document.getElementById("num1").value);
+        num2 =parseFloat(document.getElementById("num2").value);
+document.getElementById("result").innerHTML = num1 / num2;
+    }
+
+    function add(){
+        num1 = parseFloat(document.getElementById("num1").value);
+        num2 = parseFloat(document.getElementById("num2").value);
+document.getElementById("result").innerHTML = num1 + num2;
+    }
+
+    function sub(){
+        num1 = parseFloat(document.getElementById("num1").value);
+        num2 =parseFloat( document.getElementById("num2").value);
+document.getElementById("result").innerHTML = num1 - num2;
+    }
+
+    function percentage(){
+        num1 = parseFloat(document.getElementById("num1").value);
+        num2 = parseFloat(document.getElementById("num2").value);
+document.getElementById("result").innerHTML = (num1 / num2)*100;
+    }
+
+
+</script>
+</html>
